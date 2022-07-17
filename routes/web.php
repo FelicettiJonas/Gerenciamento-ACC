@@ -20,27 +20,28 @@ use Illuminate\Support\Facades\Route;
 Route::controller(\App\Http\Controllers\HomeController::class)
     ->prefix('/home')
     ->group(function (){
-        Route::get('/', 'index');
-        Route::get('/{userName}', 'show');
+        Route::get('/', 'index')->name('site.home');
+        Route::get('/{userName}', 'show')->name('site.show');
     });
 
-Route::controller(\App\Http\Controllers\ActivitiesController::class)
+Route::controller(\App\Http\Controllers\ActivityController::class)
     ->prefix('/atividade')
     ->group(function (){
-        Route::get('/', 'create');
-        Route::get('/{id}', 'show');
+        Route::get('/', 'create')->name('site.atividade.create');
+        Route::post('/', 'form')->name('site.atividade.create.form');
+        Route::get('/{id}', 'show')->name('site.atividade.show');
     });
 
 Route::controller(\App\Http\Controllers\LoginController::class)
     ->prefix('/login')
     ->group(function (){
-        Route::get('/', 'index');
-        Route::post('/', 'index');
+        Route::get('/', 'index')->name('site.login.get');
+        Route::post('/', 'index')->name('site.login.post');
     });
 
 Route::controller(\App\Http\Controllers\SinginController::class)
     ->prefix('/singin')
     ->group(function (){
-        Route::get('/', 'index');
-        Route::post('/', 'index');
+        Route::get('/', 'index')->name('site.singin.get');
+        Route::post('/', 'form')->name('site.singin.post');
     });

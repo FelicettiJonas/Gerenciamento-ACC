@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class SinginController extends Controller
 {
@@ -14,6 +15,13 @@ class SinginController extends Controller
     public function index()
     {
         return view('Singin.index');
+    }
+
+
+    public function form(Request $request){
+        
+        // dd($request->all());
+        User::create(array_merge($request->all(), ['role_id' => 1]));
     }
 
     /**

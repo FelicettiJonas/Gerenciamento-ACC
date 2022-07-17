@@ -3,19 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Activity;
+use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-class ActivitiesController extends Controller
+class ActivityController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index($id)
-    {
-       //
-    }
-    
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +16,13 @@ class ActivitiesController extends Controller
      */
     public function create()
     {
-        return view('Activities.create');
+        return view('Activity.create');
+    }
+
+
+    public function form(Request $request){
+        Activity::create($request->all());
+        dd($request->all());
     }
 
     /**
