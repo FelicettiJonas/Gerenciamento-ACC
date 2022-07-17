@@ -1,0 +1,79 @@
+body {
+    /* height: 100em; */
+    /* width: 100em; */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 0;
+    overflow: hidden;
+    vertical-align: top;
+    min-height: 100vh;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.flavorText {
+    background-color: #379936;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    border-radius: 90px 0 0 90px;
+    padding: 0 5em 0 5em;
+    vertical-align: top;
+}
+
+.flavorText h1 {
+    padding-top: 5em;
+    font-size: 32px;
+}
+
+.flavorText h2 {
+    font-size: 25px;
+
+}
+
+
+.flavorText p {
+    padding-top: 7em;
+    font-size: 20px;
+}
+
+.line {
+    width: 7px;
+    background-color: #379936;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+form {
+    /* width: 100em; */
+    /* height: 100em; */
+    text-align: left;
+    padding: 15em 0em;
+    min-height: 100vh;
+    display: block;
+    flex-wrap: wrap;
+    color: rgba(0, 0, 0, .5);
+}
+
+h2 {
+    padding-bottom: 2em;
+}
+
+span {
+    color: #379936;
+}
+
+.btn {
+    background-color: #379936;
+    border: none;
+    border-radius: 13px;
+}
+
+.btn:hover {
+    border: solid 1px;
+    border-color: #379936;
+    background-color: white;
+    color: #379936;
+}

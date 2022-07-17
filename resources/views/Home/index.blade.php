@@ -1,1 +1,5 @@
-{{-- ViewHome {{$userName}} --}}
+@extends('Layouts.site')
+
+@Section ('content')
+
+@endsection
