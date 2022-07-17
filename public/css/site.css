@@ -1,4 +1,53 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.bg-primary {
+    background-color: #F3F3F3 !important;
+}
+
+.text-primary {
+    color: white !important;
+}
+
+.text-secondary {
+    color: #379936 !important;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    background-color: #379936 !important;
+    border: none;
+    border-radius: 13px;
+}
+
+.btn-danger {
+    margin-top: 20px;
+    border: none;
+    border-radius: 13px;
+}
+
+.btn:hover {
+    border: solid 1px;
+    border-color: #379936;
+    background-color: white !important;
+    color: #379936;
+}
+
+.btn-danger:hover {
+    border: solid 1px;
+    border-color: red;
+    background-color: white !important;
+    color: red;
+}
+
+.btn:hover a {
+
+    color: #379936 !important;
+}
+
 .sidebar {
+    z-index: 1;
     min-width: 75px;
     max-width: 75px;
     min-height: 100vh;
@@ -25,4 +74,31 @@ ul.nav {
 .title h2 {
     /* padding-left: 20em; */
     width: 60%;
+}
+
+.card {
+    z-index: 2;
+    min-width: 100em;
+    max-width: 100em;
+    min-height: 90vh;
+    margin: 5em 0 0 7em;
+    padding: 1em 0 0 3em;
+    background-color: #F3F3F3;
+}
+
+.table {
+    margin: 20px 0px !important;
+    border-radius: 17px !important;
+}
+
+input {
+    background-color: #E4E4E4 !important;
+}
+
+textarea {
+    background-color: #E4E4E4 !important;
+}
+
+.mb-3 {
+    padding-bottom: 1em !important;
 }

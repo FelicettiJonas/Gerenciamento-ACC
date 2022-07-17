@@ -15,7 +15,8 @@
         <h1>Tituloadsfasdfasdf</h1>
         <h2>asdasdasdasas</h2>
     </div>
-    <nav class="navbar navbar-expand-lg bg-light sidebar">
+    <div class="flex">
+    <nav class="navbar navbar-expand-lg bg-light sidebar fixed-top">
         <div class="container-block nav">
           <a class="navbar-brand" href="#">logo</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav">
@@ -32,6 +33,7 @@
 
 
     @yield('content')
+</div>
 </body>
 
 <!-- JavaScript Bundle with Popper -->

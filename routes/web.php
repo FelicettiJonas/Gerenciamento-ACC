@@ -27,7 +27,8 @@ Route::controller(\App\Http\Controllers\HomeController::class)
 Route::controller(\App\Http\Controllers\ActivitiesController::class)
     ->prefix('/atividade')
     ->group(function (){
-        Route::get('/', 'index');
+        Route::get('/', 'create');
+        Route::get('/{id}', 'show');
     });
 
 Route::controller(\App\Http\Controllers\LoginController::class)
@@ -42,10 +43,4 @@ Route::controller(\App\Http\Controllers\SinginController::class)
     ->group(function (){
         Route::get('/', 'index');
         Route::post('/', 'index');
-    });
-
-Route::controller(\App\Http\Controllers\AccController::class)
-    ->prefix('/acc')
-    ->group(function (){
-        Route::get('/', 'index');
     });

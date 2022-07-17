@@ -18,7 +18,7 @@
         <input type="password" class="form-control" id="password" placeholder="Insira sua senha">
         </div>
         </div>
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <button type="submit" class="btn btn-primary shadow-lg">Registrar</button>
   </form>
 
 @endsection

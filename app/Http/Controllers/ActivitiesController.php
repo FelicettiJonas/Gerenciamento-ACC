@@ -11,10 +11,11 @@ class ActivitiesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('Activities.index');
+       //
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +24,7 @@ class ActivitiesController extends Controller
      */
     public function create()
     {
-        //
+        return view('Activities.create');
     }
 
     /**
@@ -45,7 +46,7 @@ class ActivitiesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Activities.show');
     }
 
     /**
