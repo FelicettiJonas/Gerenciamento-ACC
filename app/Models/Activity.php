@@ -10,8 +10,8 @@ class Activity extends Model
     use HasFactory;
 
     protected $fillable = [
-        'validator',
-        'activity',
+        'user_id',
+        'institution',
         'activity',
         'time',
         'description'

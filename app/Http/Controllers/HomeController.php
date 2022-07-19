@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Activity;
 
 class HomeController extends Controller
 {
@@ -23,9 +25,10 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($userName)
+    public function show()
     {
-        return view('Home.index', ['userName'=>$userName]);
+
+        return view('Home.index', ['userName'=>Auth::user()->name, 'activities'=>Activity::where('user_id', Auth::user()->id)->get()]);
     }
 
 }

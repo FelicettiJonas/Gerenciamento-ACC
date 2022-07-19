@@ -12,8 +12,7 @@
 <body>
 
     <div class="fixed-top bg-light title">
-        <h1>Tituloadsfasdfasdf</h1>
-        <h2>asdasdasdasas</h2>
+        <h1>{{$userName}}</h1>
     </div>
     <div class="flex">
     <nav class="navbar navbar-expand-lg bg-light sidebar fixed-top">
@@ -27,7 +26,7 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul>
-            <a class="navbar-brand fixed-bottom" href="#">img logoff</a>
+            <a class="navbar-brand fixed-bottom" href="{{route('site.logout')}}">img logoff</a>
         </div>
     </nav>
 

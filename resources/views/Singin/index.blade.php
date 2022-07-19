@@ -5,7 +5,7 @@
     <form action="{{route('site.singin.post')}}" method="POST">
         @csrf
         <h1 class="fs-1">Crie sua conta</h1>
-        <h2 class="fs-6">Já possui uma conta?<span> Acesse!</span></h2>
+        <h2 class="fs-6">Já possui uma conta? <a href="{{route('site.login.get')}}"></a><span>Acesse!</span></h2>
         <div class="mb-3">
         <label for="user" class="form-label">Usuario</label>
         <input type="text" class="form-control" id="user" placeholder="Insira seu usuario" name='user'>

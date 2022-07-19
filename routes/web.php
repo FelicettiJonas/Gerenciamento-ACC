@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,24 +20,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(\App\Http\Controllers\HomeController::class)
     ->prefix('/home')
+    ->middleware(Login::class)
     ->group(function (){
-        Route::get('/', 'index')->name('site.home');
-        Route::get('/{userName}', 'show')->name('site.show');
+        Route::get('/', 'show')->name('site.home');
     });
-
-Route::controller(\App\Http\Controllers\ActivityController::class)
+    
+    Route::controller(\App\Http\Controllers\ActivityController::class)
     ->prefix('/atividade')
+    ->middleware(Login::class)
     ->group(function (){
         Route::get('/', 'create')->name('site.atividade.create');
         Route::post('/', 'form')->name('site.atividade.create.form');
-        Route::get('/{id}', 'show')->name('site.atividade.show');
+        Route::get('/show', 'show')->name('site.atividade.show');
     });
 
 Route::controller(\App\Http\Controllers\LoginController::class)
     ->prefix('/login')
     ->group(function (){
         Route::get('/', 'index')->name('site.login.get');
-        Route::post('/', 'index')->name('site.login.post');
+        Route::post('/', 'form')->name('site.login.post');
+        Route::get('/logout', 'logout')->name('site.logout');
     });
 
 Route::controller(\App\Http\Controllers\SinginController::class)
